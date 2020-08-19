@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/knex": "^0.16.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsc-node": "^0.0.3",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --ignore-watch node_modules app.ts",
+    "migration:run": "knex migrate:latest --knexfile knexfile.ts",
+    "migration:refresh": "knex migrate:rollback --knexfile knexfile.ts && knex migrate:latest --knexfile knexfile.ts",
+    "seed": "knex seed:run"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
